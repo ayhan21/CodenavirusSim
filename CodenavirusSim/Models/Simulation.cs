@@ -116,7 +116,8 @@ namespace CodenavirusSim.Models
                         /* Checks if the next 'cell' in matrix is a human, able to infect
                          * Human object cannot becomes Healthy on Day 3 and cannot infect anymore
                          */
-                        if (Scale[row, col].Status == Status.N && Scale[row, col].InfectedDays == 3)
+                        // edit && to ||
+                        if (Scale[row, col].Status == Status.N || Scale[row, col].InfectedDays == 3)
                         {
                             continue;
                         }
